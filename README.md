@@ -1,4 +1,4 @@
-# separaLinks
+# separador de links
 
 Com o código fonte no arquivo links.txt, o script irá ler esse arquivo
 procurar um padrão de links e separa-los no arquivo paginas.html,
