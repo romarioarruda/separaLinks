@@ -11,26 +11,8 @@ else{
 
 $veiculo = 918;
 $extensao = 'jpg';
-
-echo "
-ssh h1-df
-cd /empauta/ocr/{$data}/{$veiculo}
-sudo -s
-\n
-scp *.{$extensao} romario.arruda@h1-df:/empauta/ocr/{$data}/{$veiculo}
-\n
-ephp /internet/web/empautabot/fotografia/recopiar_pasta_ocr.php /empauta/ocr/{$data}/{$veiculo} \"(\w+).{$extensao}\"
-\n
-cd /empauta/ocr/{$data}
-\n
-mkdir {$veiculo}/
-chmod 777 {$veiculo}/
-\n
-cd /empauta/ocr/{$data}/{$veiculo}
-
-";
-
 $tudo = "";
+
 $ponteiro = fopen ("/home/romario.arruda/flip/{$veiculo}/links.txt","r");
 while (!feof ($ponteiro)) {
 	$tudo .= fgets($ponteiro,4096);
